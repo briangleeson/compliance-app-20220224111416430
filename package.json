@@ -6,10 +6,10 @@
   "author": "Robbie Minshall <rjminsha@us.ibm.com>",
   "dependencies": {
     "express": "4.17.1",
+    "hosted-git-info": "3.0.8",
     "jest": "^26.6.3",
-    "node-notifier": "9.0.1",
     "lodash": "4.17.21",
-    "hosted-git-info": "3.0.8"
+    "node-notifier": "9.0.1"
   },
   "scripts": {
     "start": "node app.js",

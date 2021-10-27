@@ -17,10 +17,16 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 const indexRouter = require('./routes/index');
-const flightBookingRouter = require('./routes/flights');
-
-const app = express();
-
+const flightBookingRouter = require('./routes/flights');  
+const swaggerUi = require('swagger-ui-express'),
+swaggerDocument = require('./swagger.json');
+const app = express(); 
+ 
+app.use(
+  '/api-docs',
+  swaggerUi.serve, 
+  swaggerUi.setup(swaggerDocument)
+);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -38,7 +44,6 @@ app.use('/flightbooking', flightBookingRouter)
 app.use((req, res, next) => {
   next(createError(404));
 });
-
 // error handler
 app.use((err, req, res, next) => {
   // set locals, only providing error in development
@@ -50,5 +55,4 @@ app.use((err, req, res, next) => {
   res.render('error');
 
 });
-
 module.exports = app;

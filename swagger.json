@@ -1,0 +1,59 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Hello Compliance App",
+    "description": "Basic API for hello-compliance-app",
+    "license": {
+      "name": "Copyright 2014-2021 IBM",
+      "url": "https://github.ibm.com/one-pipeline/hello-compliance-app/blob/master/License.txt"
+    }
+  },
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": ["application/json"],
+  "paths": {
+    "/": {
+        "parameters" : [
+            {
+                "name": "logemail",
+                "in": "path",
+                "required": "true",
+                "description": "Entry email to login",
+                "type": "string"
+            },
+            {
+                "name": "logpassword",
+                "in": "path",
+                "description": "Enter password to login",
+                "type": "string"
+            }
+        ],
+        "get": {
+          "summary": "Log in as a user",
+          "responses": {
+              "200": {
+                "description": "OK"
+              }
+          }
+      }        
+    },
+    "/flightbooking": {
+        "get": {
+            "summary": "Get Flight Booking page",
+            "responses": {
+                "200": {
+                  "description": "OK"
+                }
+            }
+        }
+    }
+  },
+  "definitions": {
+  }
+}   

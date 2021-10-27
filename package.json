@@ -12,17 +12,25 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^3.1.6",
-    "express": "~4.16.1",
+    "express": "^4.16.4",
     "express-session": "^1.17.1",
     "http-errors": "~1.6.3",
+    "install": "^0.13.0",
     "jest": "^27.0.1",
     "mongoose": "^5.13.2",
     "morgan": "~1.9.1",
-    "prompts": "^2.4.2"
+    "nodemon": "^2.0.14",
+    "openapi-types": "^9.3.0",
+    "prom-client": "^12.0.0",
+    "prompts": "^2.4.2",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-stats": "^0.99.2",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "ansi-regex": "^6.0.1",
     "axios": "^0.21.3",
+    "express-swagger-generator": "^1.1.17",
     "mpath": "^0.8.4"
   }
 }

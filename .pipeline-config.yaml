@@ -103,5 +103,8 @@ dynamic-scan:
     #!/usr/bin/env bash
     echo "Dynamic Application Scan is in feature preview mode."
     echo "To setup dynamic scan for your app follow the documentation at https://cloud.ibm.com/docs/devsecops?topic=devsecops-custom-scripts."
-
+    
+    export APP_URL=$(cat ../app-url)
+    source scripts/zap/setup_api_scan.sh
+    source scripts/zap/run_api_scan.sh
 

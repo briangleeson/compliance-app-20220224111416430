@@ -12,7 +12,9 @@ cd "$WORKSPACE" || exit 1
 # Image containing the ZAP scanner, 
 # this have to be deployed to global ICR
 # right now you have to copy this to your namespace
-IMAGE="$(get_env zap-image "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-api-scanner@sha256:4720a261ec69b8e1cef5c74def46b0c729b4073a1c641a5390e1c45c6ab8c513")"
+#IMAGE="$(get_env zap-image "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-api-scanner@sha256:4720a261ec69b8e1cef5c74def46b0c729b4073a1c641a5390e1c45c6ab8c513")"
+IMAGE="$(get_env zap-image "huayuenh/newapi:latest")"
+
 
 IBMCLOUD_API="$(get_env ibmcloud-api "https://cloud.ibm.com")"
 CLUSTER_NAMESPACE="$(get_env zap-namespace "zap")"

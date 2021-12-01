@@ -34,7 +34,7 @@ report() {
   if [[ "${MESSAGE}" == "COMPLETED" ]]; then
       FILTER='{"alertsSeverityFilter" : "'$FILTER_OPTIONS'"}'
       echo "filtor options $FILTER"
-      curl -X GET -H "Content-type: application/json" "${ZAP_BASE_URL}"/report
+      REPORT=$(curl -X GET "${ZAP_BASE_URL}"/report)
       curl -X GET -H "Content-type: application/json" -d "${FILTER}" "${ZAP_BASE_URL}"/report -o "${REPORTFILE}"
       source "${ZAP_SCRIPTS_DIR}"/report
   else

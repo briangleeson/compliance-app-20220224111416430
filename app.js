@@ -15,11 +15,17 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const helmet = require('helmet')
+const cors = require('cors')
 
 const indexRouter = require('./routes/index');
 const flightBookingRouter = require('./routes/flights');
 
 const app = express();
+app.disable('x-powered-by');
+app.use(helmet.frameguard());
+app.use(cors());
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

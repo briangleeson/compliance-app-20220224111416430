@@ -113,6 +113,6 @@ dynamic-scan:
     set_env "target-application-server-url" "$APP_URL"
     export_env "target-application-server-url"  
     
-    #source scripts/zap/trigger_zap_scans
-    source scripts/zap/setup_api_scan.sh
-    source scripts/zap/run_api_scan.sh
+    source scripts/zap/trigger_zap_scans
+    #source scripts/zap/setup_api_scan.sh
+    #source scripts/zap/run_api_scan.sh

@@ -1,82 +1,31 @@
 {
-	"excludeScanTypes": [
-		"CRLF_Injection",
-		"Buffer_Overflow",
-		"Directory_Browsing",
-		"External_Redirect",
-		"Format_String_Error",
-		"Parameter_Tampering",
-		"Remote_File_Inclusion",
-		"Script_Active_Scan",
-		"Server_Side_Code_Injection",
-		"Server_Side_Include",
-		"SQL_Injection",
-		"Xpath_Injection",
-		"XXE_External_Entity",
-		"SOAP_Action_Spoofing",
-		"SOAP_XML_Injection",
-		"Relative_Path_Confusion"
-	],
-	"apisToScan": [{
-			"path": "/",
-			"method": "get"
-		},
-		{
-			"path": "/flightbooking",
-			"method": "get"
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Hello Compliance App",
+		"description": "Basic API for hello-compliance-app",
+		"license": {
+			"name": "Copyright 2014-2021 IBM",
+			"url": "https://github.ibm.com/one-pipeline/hello-compliance-app/blob/master/License.txt"
 		}
+	},
+	"basePath": "/",
+	"schemes": [
+		"http"
 	],
-	"apiDefinitionJson": {
-		"swagger": "2.0",
-		"info": {
-			"version": "1.0.0",
-			"title": "Hello Compliance App",
-			"description": "Basic API for hello-compliance-app",
-			"license": {
-				"name": "Copyright 2014-2021 IBM",
-				"url": "https://github.ibm.com/one-pipeline/hello-compliance-app/blob/master/License.txt"
-			}
-		},
-		"basePath": "/",
-		"schemes": [
-			"http"
-		],
-		"consumes": [
-			"application/json"
-		],
-		"produces": ["application/json"],
-		"paths": {
-			"/": {
-				"parameters": [{
-						"name": "logemail",
-						"in": "path",
-						"required": "true",
-						"description": "Entry email to login",
-						"type": "string"
-					},
-					{
-						"name": "logpassword",
-						"in": "path",
-						"description": "Enter password to login",
-						"type": "string"
-					}
-				],
-				"get": {
-					"summary": "Log in as a user",
-					"responses": {
-						"200": {
-							"description": "OK"
-						}
-					}
-				}
-			},
-			"/flightbooking": {
-				"get": {
-					"summary": "Get Flight Booking page",
-					"responses": {
-						"200": {
-							"description": "OK"
-						}
+	"consumes": [
+		"application/json"
+	],
+	"produces": [
+		"application/json"
+	],
+	"paths": {
+		"/health": {
+			"get": {
+				"summary": "Get Application Health",
+				"responses": {
+					"200": {
+						"description": "OK"
 					}
 				}
 			}

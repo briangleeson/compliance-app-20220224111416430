@@ -86,11 +86,8 @@ SHOW_ZAP_LOGS="$(get_env show-zap-log "false")"
 
 # Images and params for setting up pull secrets. 
 # Looking to get these pushed to ICR to remove the self hosting dependency and need for pull secrets
-# ZAP_UI_IMAGE="$(get_env zap-ui-image "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-ui-scanner@sha256:7e5b50ad343228327ef5ce8446109430184b6e5a999730837be2ef3aa7104d8c")"
-# ZAP_PROXY_IMAGE="$(get_env zap-proxy-image "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-ui-proxy@sha256:c66dcebdf2bba59a9b3e8506710fba41c7edb9105f23caa673343fbdb1278e44")"
-# ZAP_API_IMAGE="$(get_env zap-api-image "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-api-scanner@sha256:4720a261ec69b8e1cef5c74def46b0c729b4073a1c641a5390e1c45c6ab8c513")"
 ZAP_UI_IMAGE="$(get_env zap-ui-image "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-ui-scanner@sha256:7e5b50ad343228327ef5ce8446109430184b6e5a999730837be2ef3aa7104d8c")"
 ZAP_PROXY_IMAGE="$(get_env zap-proxy-image "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-ui-proxy@sha256:c66dcebdf2bba59a9b3e8506710fba41c7edb9105f23caa673343fbdb1278e44")"
-ZAP_API_IMAGE="$(get_env zap-api-image "huayuenh/newapi:latest")"
+ZAP_API_IMAGE="$(get_env zap-api-image "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-api-scanner@sha256:e8984f7077199b0a8b4d6f49c655b0305f41ed5769dcef8d4947f49579e375df")"
 
 ICR_PATTERN="icr.io"

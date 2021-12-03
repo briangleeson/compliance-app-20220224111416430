@@ -56,7 +56,7 @@
 
     # SET UP ZAP API SCAN
     # set the zap api image
-    set_env "zap-api-image" "huayuenh/newapi:latest"
+    set_env "zap-api-image" "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-api-scanner@sha256:e8984f7077199b0a8b4d6f49c655b0305f41ed5769dcef8d4947f49579e375df"
 
     # FLAG FOR RUNNING API SCAN AS DIND default is false
     set_env "zap_dind" "true"

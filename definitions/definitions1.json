@@ -17,7 +17,8 @@
 		"application/json"
 	],
 	"produces": [
-		"application/json"
+		"application/json",
+		"text/html"
 	],
 	"paths": {
 		"/health": {

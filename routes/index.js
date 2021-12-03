@@ -29,7 +29,7 @@ router.get('/health', (req, res, next) => {
   res.setHeader('X-Content-Type-Options','nosniff')
   res.setHeader('Content-Security-Policy', "default-src 'self'; script-src unpkg.com;")
 
-  return res.status(200).send({health:"OK"})
+  return res.status(200).json({health:"OK"})
 })
 
 /* GET home page. */

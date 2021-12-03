@@ -75,29 +75,3 @@
 
     # start the scan
     source one-pipeline-config-repo/scripts/zap/zap_core/run_scan
-
-    # SET UP ZAP UI SCAN 
-    # set the zap ui images
-    #set_env "zap-ui-image" "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-ui-scanner@sha256:7e5b50ad343228327ef5ce8446109430184b6e5a999730837be2ef3aa7104d8c"
-    #set_env "zap-proxy-image" "icr.io/continuous-delivery/toolchains/devsecops/owasp-zap-ui-proxy@sha256:c66dcebdf2bba59a9b3e8506710fba41c7edb9105f23caa673343fbdb1278e44"
-
-    # set the url of the app to scan (doesn't need to be set a second time)
-    # sample UI tests provided by SCC team
-    # URL=https://test.cloud.ibm.com/catalog
-    #set_env "target-application-server-url" "${URL}"
-
-    # set the UI flag. By default it is set to false
-    #set_env "zap-ui-scan" "true"
-
-    # set the path the directory containing the UI test scripts
-    #set_env "zap-ui-script-directory" "one-pipeline-config-repo/scripts/zap/zap-ui-test/uiscripts"
-
-    # set the path to a context file if required
-    # set_env "context-file" "one-pipeline-config-repo/scripts/zap/zap-ui-test/contextfile/custom-context.context"
-
-    # set an optional custom file to run during the UI set up. See example
-    # it might be a requirement to create a script container secrets for the UI tests to import
-    #set_env "zap-ui-custom-script" "one-pipeline-config-repo/scripts/zap/zap-custom-scripts/custom-ui-script"
-
-    # start the scan
-    # source one-pipeline-config-repo/scripts/zap/zap_core/run_scan

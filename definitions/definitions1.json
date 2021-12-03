@@ -6,7 +6,7 @@
 		"description": "Basic API for hello-compliance-app",
 		"license": {
 			"name": "Copyright 2014-2021 IBM",
-			"url": "https://github.ibm.com/one-pipeline/hello-compliance-app/blob/master/License.txt"
+			"url": "https://github.com/open-toolchain/hello-compliance-app/blob/master/License.txt"
 		}
 	},
 	"basePath": "/",

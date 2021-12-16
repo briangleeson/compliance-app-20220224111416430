@@ -171,7 +171,7 @@ list_repos | while IFS= read -r repo ; do
   if [ -s "${SONAR_DIR}/app_issues" ]; then
     save_result static-scan "${SONAR_DIR}/app_issues_and_quality_status"
     evidence_params+=(
-      --attachment "${SONAR_DIR}/app_issues"
+      --attachment "${SONAR_DIR}/app_issues_and_quality_status"
     )
   fi
 

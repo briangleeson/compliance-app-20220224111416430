@@ -30,5 +30,5 @@ echo -n "$IMAGE_TAG" > ../image-tags
 echo -n "$IMAGE" > ../image
 
 if which save_artifact >/dev/null; then
-  save_artifact app-image type=image "name=${IMAGE}" "digest=${DIGEST}"
+  save_artifact app-image type=image "name=${IMAGE_NAME}" "digest=${DIGEST}"
 fi

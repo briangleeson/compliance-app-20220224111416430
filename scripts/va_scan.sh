@@ -97,7 +97,7 @@ check_va_scan_result() {
 
   if [ $exit_code -ne 0 ]; then
     echo "Error during the region set. There might be an ibmcloud outage.">&2
-    printf "\nFor further information check the documentation: https://test.cloud.ibm.com/docs/devsecops?topic=devsecops-troubleshoot-devsecops\n" >&2
+    printf "For further information check: https://cloud.ibm.com/status\n" >&2
   fi
 
   local pipeline_image_url="$input_image_url@$digest"
@@ -109,7 +109,7 @@ check_va_scan_result() {
 
   if [ $exit_code -ne 0 ]; then
     echo "Error during image inspect. There might be an ibmcloud outage.">&2
-    printf "\nFor further information check the documentation: https://test.cloud.ibm.com/docs/devsecops?topic=devsecops-troubleshoot-devsecops\n" >&2
+    printf "For further information check: https://cloud.ibm.com/status\n" >&2
   fi
 
   va_report_json="${VA_SCAN_DIR}/${name}_va-report.json"
@@ -199,7 +199,7 @@ start_va_scan() {
 
   if [ $exit_code -ne 0 ]; then
     echo "Error during the ibmcloud login. There might be an ibmcloud outage.">&2
-    printf "For further information check the documentation: https://test.cloud.ibm.com/docs/devsecops?topic=devsecops-troubleshoot-devsecops\n" >&2
+    printf "For further information check: https://cloud.ibm.com/status\n" >&2
   fi
 
   #

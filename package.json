@@ -17,14 +17,15 @@
     "express-session": "^1.17.1",
     "helmet": "^4.6.0",
     "http-errors": "~1.6.3",
-    "jest": "^27.3.1",
+    "jest": "^27.4.5",
     "mongoose": "^5.13.13",
     "morgan": "~1.9.1",
+    "nocache": "^3.0.1",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
     "ansi-regex": "^6.0.1",
-    "axios": "^0.21.3",
+    "axios": "^0.24.0",
     "mpath": "^0.8.4"
   }
 }
